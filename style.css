@@ -1,0 +1,206 @@
+body {
+    font-family:"Roboto", Arial, sans-serif;
+    margin:0 auto;
+    text-align:center;
+    margin-top:10px;
+    color:#FFF;
+    background:#333;
+}
+svg { 
+    position:absolute; top:0; left:0; z-index: 0;
+}
+.newCase {
+    animation: newCase 0.5s ease-out 0s;
+}
+@keyframes newCase {
+    0%, 100% {transform: scale(1)}   
+    50% {transform: scale(1.1)}
+}
+
+.intro {
+    animation: intro 0.5s ease-out 0s;
+}
+@keyframes intro {
+    0%, 100% {transform: scale(1)}   
+    50% {transform: scale(1.1)}
+}
+
+
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.inactive {
+    color: #cec1b3 !important;
+    cursor: default !important;
+}
+.gameOver {
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+    left: 0;
+    padding: 75px 0;
+    width: 100%;
+    position: absolute;
+    font-size: 60px;
+    color: yellow;
+    z-index: 1000;
+    font-weight: bold;
+    background-color: #333;
+}
+.grid {
+    position: relative;
+    z-index: 100;
+    margin: 20px auto 0;
+    width: 100vw;
+    max-width: 80vh;
+    height: 100vw;
+    max-height: 80vh;
+    font-size: 2rem;
+    background-color: #bcad9f;
+    padding: 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.header {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+    width: 100vw;
+    max-width: 80vh;
+    height: 10vw;
+    max-height: 10vh;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.row, row2 {
+    display: flex;
+}
+.box2 {
+    display: inline-block;
+}
+.box, box2 {
+    background: #cec1b3;
+    margin: 5px;
+    font-weight: bold;
+    flex: 1 0 auto;
+    position: relative;
+    color: #333;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.box:after {
+    content: "";
+    float:left;
+    display: block;
+    padding-top: 100%;
+}
+.box .inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    left: -12px;
+    color: #cec1b3;
+    font-size: 55px;
+    top: -6px;
+    position: relative;
+    float: left;
+    font-weight: bold;
+}
+#score{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+#bestScore{
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+}
+#score span, #bestScore span{
+    font-size: 12px;
+    display: block;
+}
+#score .score, #bestScore .bestScore{
+    font-size: 30px;
+}
+.play {
+    border: none;
+    top: 72px;
+    background: none;
+    position: absolute;
+    left: -7px;
+    color: yellow;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+.undo{
+    top: 73px;
+    background: no-repeat;
+    position: absolute;
+    right: 0px;
+    border: none;
+    color: yellow;
+    font-size: 20px;
+    right: -7px;
+    cursor: pointer;
+    outline: none;
+}
+.num2 {
+    background-color: #f1eae2;
+    font-weight: bold;
+}
+.num4 {
+    background-color: #f8b074;
+}
+.num6 {
+    background-color: #FE8F01;
+}
+.num8 {
+    background-color: #F65E3B;
+    color: #fff;
+}
+.num16 {
+    background-color: rgb(240, 225, 66);
+}
+.num32 {
+    background-color: #FBE70A;
+}
+.num64 {
+    background-color: rgb(235, 175, 9);
+}
+.num128 {
+    background-color: rgb(7, 151, 241);
+    color: #fff !important;
+}
+.num256 {
+    background-color: rgb(4, 94, 150);
+    color: #fff !important;
+}
+.num512 {
+    background-color: rgb(3, 38, 59);
+    color: #fff !important;
+}
+.num1024 {
+    background-color: rgb(89, 92, 94);
+    color: #fff !important;
+}
+.num2048 {
+    background-color: rgb(17, 14, 14);
+    color: yellow !important;
+}
+

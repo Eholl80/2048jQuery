@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 2048</title>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" /> 
+    </head>
+    <body>    
+        
+        <div class="maDiv"></div>
+
+
+        <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" id="intro2">
+            <path id="divSvg2" d=""></path>
+        </svg>
+        <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" id="intro3">
+            <path id="divSvg3" d=""></path>
+        </svg>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+        <script src="jquery.waves.js"></script>
+        <script src="game2048.js"></script>
+        <script>
+            $(function() {
+                
+                $('.maDiv').game2048();
+
+                $('#divSvg2').drawWaves({
+                    speed: .25,
+                    color: '#252526'
+                });
+                $('#divSvg3').drawWaves({
+                    speed: .45,
+                    color: '#1e1e1e'
+                });
+
+            }); 
+        </script>
+    </body>
+</html>
